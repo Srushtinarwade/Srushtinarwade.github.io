@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Srushti Narwade | AI/ML Engineer</title>
+<meta name="description" content="AI/ML Engineer who builds agentic systems and LLM applications, and loves coding neural networks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#fff8fb;--surface:#ffffff;--text:#2a2b45;--muted:#66688a;
+  --pink:#ff6fa8;--pink-soft:#ffe3ef;--blue:#4ba3ff;--blue-soft:#dff0ff;--lav:#ece4ff;
+  --line:#f3d9e6;--shadow:0 10px 30px rgba(255,111,168,.16);
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{margin:0;color:var(--text);font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;background:var(--bg);overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(160deg,#fff4f9 0%,#ffffff 45%,#eef7ff 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:float 14s ease-in-out infinite}
+.b1{width:380px;height:380px;background:#ffc2dc;top:-80px;left:-90px}
+.b2{width:340px;height:340px;background:#bfe1ff;top:30%;right:-110px;animation-delay:-5s}
+.b3{width:300px;height:300px;background:#e5d9ff;bottom:-90px;left:25%;animation-delay:-9s}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(24px,-30px)}}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:14px}
+.brand{font-weight:800;color:var(--text);font-size:17px}
+.brand i{font-style:normal;color:var(--pink)}
+.links{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.links::-webkit-scrollbar{display:none}
+.links a{color:var(--muted);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;white-space:nowrap;transition:.2s}
+.links a:hover{background:var(--pink-soft);color:var(--pink)}
+section{padding:70px 0 6px}
+h2{font-size:clamp(26px,4.2vw,34px);margin:0 0 22px;font-weight:800;letter-spacing:-.02em}
+h2 span{background:linear-gradient(90deg,var(--pink),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{padding:76px 0 20px;text-align:center}
+.hi{display:inline-block;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:7px 16px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:20px}
+.hi b{display:inline-block;animation:wave 2.2s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-10deg)}}
+h1{font-size:clamp(40px,9vw,76px);line-height:1.04;margin:0 0 16px;font-weight:800;letter-spacing:-.035em}
+h1 .w{display:inline-block;opacity:0;transform:scale(.4) translateY(30px);animation:pop .7s cubic-bezier(.34,1.56,.64,1) forwards}
+h1 .w:nth-child(2){animation-delay:.18s}
+h1 .grad{background:linear-gradient(90deg,var(--pink),#a98bff,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes pop{to{opacity:1;transform:none}}
+.role{font-size:clamp(18px,3vw,24px);font-weight:600;color:var(--blue);margin:0 0 14px}
+.lead{max-width:640px;margin:0 auto 28px;color:var(--muted);font-size:clamp(15px,2.3vw,17px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;background:var(--surface);color:var(--text);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.btn:hover{transform:translateY(-4px) scale(1.04)}
+.btn.primary{background:linear-gradient(90deg,var(--pink),#ff8fbd);color:#fff;border-color:transparent}
+.btn.blue{background:linear-gradient(90deg,var(--blue),#7bbcff);color:#fff;border-color:transparent}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:44px;text-align:left}
+.stat{border-radius:22px;padding:20px 22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.stat:nth-child(1){background:var(--pink-soft)}.stat:nth-child(2){background:var(--blue-soft)}.stat:nth-child(3){background:var(--lav)}
+.stat b{display:block;font-size:34px;font-weight:800;letter-spacing:-.02em}
+.stat:nth-child(1) b{color:var(--pink)}.stat:nth-child(2) b{color:var(--blue)}.stat:nth-child(3) b{color:#8a63ff}
+.stat small{color:var(--muted);font-size:13px;line-height:1.4;display:block}
+.about p{max-width:760px;margin:0 0 14px;font-size:16px}
+.about .fun{background:linear-gradient(135deg,var(--pink-soft),var(--blue-soft));border-radius:22px;padding:18px 22px;max-width:760px;box-shadow:var(--shadow)}
+.edu{display:inline-flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:14px 20px;box-shadow:var(--shadow);margin-top:10px}
+.edu .ic{font-size:26px}
+.edu b{display:block;font-size:15px}
+.edu small{color:var(--muted);font-size:13px}
+.grid{display:grid;gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(75,163,255,.22)}
+.card h3{margin:0 0 4px;font-size:20px;font-weight:700;letter-spacing:-.01em}
+.meta{color:var(--muted);font-size:13px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.card p{margin:0 0 14px;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.tag{font-size:12.5px;padding:4px 12px;border-radius:999px;font-weight:600;background:var(--pink-soft);color:#d6407f}
+.tag:nth-child(3n+2){background:var(--blue-soft);color:#2c7fd6}
+.tag:nth-child(3n){background:var(--lav);color:#6d49e0}
+.hl{display:inline-block;background:linear-gradient(90deg,var(--pink-soft),var(--blue-soft));padding:1px 9px;border-radius:8px;font-weight:700;font-size:14px}
+.toolbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.toolbox .card{padding:20px}
+.toolbox h3{font-size:15px;margin:0 0 12px}
+.toolbox .tags{margin:0}
+.contact{text-align:center;margin:70px 0 30px;padding:46px 22px;border-radius:30px;background:linear-gradient(135deg,var(--pink-soft),#fff,var(--blue-soft));border:1px solid var(--line);box-shadow:var(--shadow)}
+.contact p{color:var(--muted);max-width:480px;margin:0 auto 22px}
+footer{padding:18px 0 30px;color:var(--muted);font-size:13px;text-align:center}
+.js .pop{opacity:0;transform:translateY(40px) scale(.92)}
+.js .pop.in{animation:pop .7s cubic-bezier(.34,1.56,.64,1) forwards}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .pop,h1 .w{opacity:1;transform:none}}
+@media (max-width:560px){.links a{padding:6px 9px}.hero{padding-top:56px}}
+</style>
+</head>
+<body>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Srushti<i>.</i></a>
+  <nav class="links" aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#toolbox">Toolbox</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <span class="hi"><b>👋</b> Hi, I’m</span>
+    <h1><span class="w">Srushti</span> <span class="w grad">Narwade</span></h1>
+    <p class="role">AI/ML Engineer</p>
+    <p class="lead">Always curious, always building. I love going deep into the models themselves, and I’m driven to turn ambitious AI ideas into systems that work in the real world.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn blue" href="https://github.com/Srushtinarwade" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/srushti-narwade-8469b0255/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div class="stat pop"><b>85%</b><small>human-verified resolution success for my agentic system, on 200 held-out tickets</small></div>
+      <div class="stat pop"><b>95.67%</b><small>test accuracy after fine-tuning GPT-2 for SMS spam classification</small></div>
+      <div class="stat pop"><b>♟ 1200+</b><small>chess.com rating</small></div>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About <span>me</span></h2>
+    <p class="pop">I’m an AI/ML Engineer who loves building agentic systems and LLM applications. I’ve built and deployed an agentic AI system on GCP, and I’ve implemented the GPT-2 architecture from scratch in PyTorch. I enjoy working with RAG, embeddings, vector databases and model fine-tuning.</p>
+    <p class="pop fun">Outside of work, I’m an advanced chess player with a 1200+ rating on chess.com. I love building models and coding neural networks, and chess taught me to think a few moves ahead, which comes in handy when designing agent workflows.</p>
+    <div class="edu pop"><span class="ic">🎓</span><div><b>B.Tech in Artificial Intelligence &amp; Machine Learning</b><small>Savitribai Phule Pune University · 2026</small></div></div>
+  </section>
+
+  <section id="experience">
+    <h2>My <span>experience</span></h2>
+    <article class="card pop">
+      <h3>Research Intern · IIT Roorkee</h3>
+      <div class="meta"><span>Indian Institute of Technology Roorkee</span><span>Jun 2025 – Nov 2025</span></div>
+      <p>I built a traffic simulation to study how roundabouts perform under different traffic conditions. I applied a Genetic Algorithm to optimize the model and reduce the gap between simulated and target capacity, and carried out sensitivity analysis to identify the factors with the greatest impact.</p>
+      <div class="tags"><span class="tag">Genetic Algorithm</span><span class="tag">Sensitivity Analysis</span><span class="tag">Simulation</span><span class="tag">Optimization</span></div>
+    </article>
+  </section>
+
+  <section id="projects">
+    <h2>My <span>projects</span></h2>
+    <div class="grid">
+      <article class="card pop">
+        <h3>ResolveIQ: Agentic AI Ticket Resolution</h3>
+        <div class="meta"><span>2026</span><a href="https://github.com/Srushtinarwade/ResolveIQ" target="_blank" rel="noopener">View on GitHub →</a></div>
+        <p>An agentic AI system that picks up incoming ServiceNow tickets, finds similar past cases and drafts a resolution. It runs as a stateful LangGraph workflow (summarize, retrieve, generate, post) with Gemini, FastAPI and PostgreSQL/PGVector, with checkpointing, retries and authentication, and it’s deployed as a Docker container on Google Cloud Run. On 200 held-out tickets, it reached <span class="hl">85%</span> human-verified resolution success.</p>
+        <div class="tags"><span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">FastAPI</span><span class="tag">PGVector</span><span class="tag">RAG</span><span class="tag">Docker</span><span class="tag">Cloud Run</span></div>
+      </article>
+      <article class="card pop">
+        <h3>GPT-2 Architecture Reimplementation and Fine-Tuning</h3>
+        <div class="meta"><span>2026</span><a href="https://github.com/Srushtinarwade/GPT-2-Architecture-Reimplementation-and-Fine-Tuning" target="_blank" rel="noopener">View on GitHub →</a></div>
+        <p>My deep dive into how language models really work. I implemented the GPT-2 architecture from scratch in PyTorch, covering tokenization, embeddings, multi-head self-attention and Transformer blocks, and built the training loop with AdamW. I then fine-tuned it from pretrained GPT-2 weights with a classification head to detect SMS spam, reaching <span class="hl">95.67%</span> test accuracy on a balanced held-out set.</p>
+        <div class="tags"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Self-Attention</span><span class="tag">Deep Learning</span></div>
+      </article>
+      <article class="card pop">
+        <h3>ISRO Chandrayaan-3 Q&amp;A System</h3>
+        <div class="meta"><span>2026</span><a href="https://github.com/Srushtinarwade/ISRO_Chandryan_QnA" target="_blank" rel="noopener">View on GitHub →</a></div>
+        <p>A question-answering assistant for Chandrayaan-3 mission documents. PDFs are split into chunks, embedded with all-MiniLM-L6-v2 and indexed in FAISS, and the top matches are passed to DistilGPT-2 through engineered prompts to generate grounded answers.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">RAG</span><span class="tag">Hugging Face</span><span class="tag">Prompt Engineering</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="toolbox">
+    <h2>My <span>toolbox</span></h2>
+    <div class="toolbox">
+      <div class="card pop"><h3>🤖 Agentic AI &amp; LLMs</h3><div class="tags"><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Agent Memory</span><span class="tag">Model Context Protocol (MCP)</span><span class="tag">Prompt Engineering</span><span class="tag">LLM Evaluation</span><span class="tag">Hugging Face</span></div></div>
+      <div class="card pop"><h3>🧠 Models &amp; Deep Learning</h3><div class="tags"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Self-Attention</span><span class="tag">Neural Networks</span><span class="tag">NLP</span><span class="tag">Model Fine-Tuning</span><span class="tag">Machine Learning</span><span class="tag">Feature Engineering</span><span class="tag">Scikit-learn</span></div></div>
+      <div class="card pop"><h3>🔎 Data &amp; Retrieval</h3><div class="tags"><span class="tag">Embeddings</span><span class="tag">Semantic Retrieval</span><span class="tag">Vector Databases</span><span class="tag">PGVector</span><span class="tag">FAISS</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">OpenCV</span></div></div>
+      <div class="card pop"><h3>☁️ Backend, Cloud &amp; Tools</h3><div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Pydantic</span><span class="tag">REST APIs</span><span class="tag">Webhooks</span><span class="tag">Docker</span><span class="tag">Google Cloud Run</span><span class="tag">Git</span><span class="tag">VS Code</span><span class="tag">Google Colab</span></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact pop">
+    <h2>Let’s <span>connect</span></h2>
+    <p>Have an idea, a project, or just want to talk AI? The best way to reach me is email.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:srushtinarwade0@gmail.com">srushtinarwade0@gmail.com</a>
+      <a class="btn blue" href="https://www.linkedin.com/in/srushti-narwade-8469b0255/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Srushtinarwade" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Srushti Narwade</footer>
+
+<script>
+(function(){
+  var d=document.documentElement;d.classList.add('js');
+  var els=document.querySelectorAll('.pop');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+  },{threshold:.12});
+  els.forEach(function(e,i){e.style.animationDelay=((i%3)*0.08)+'s';io.observe(e);});
+})();
+</script>
+</body>
+</html>
